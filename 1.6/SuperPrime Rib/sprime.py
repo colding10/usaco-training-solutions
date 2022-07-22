@@ -38,7 +38,7 @@ current_rib = []
 current_number = []
 for _ in range(rib_length):
     for index, digit in enumerate(range(1, 11, 2)):
-        possible_digits[index].append(digitw )
+        possible_digits[index].append(digit)
 
 with open('sprime.out', 'w') as file:
     file.write()
