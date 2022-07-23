@@ -10,36 +10,36 @@ TASK: milk2
 #except:
 #    pass
 
-def sortKeyGen(line):
+def sortKey(line):
 	if line:
-		start, end = map(int, line.strip().split(" "))
+		start, end = map(int, line.strip().split(' '))
 		return start
 
 with open('milk2.in','r') as file:
-	nCows = int(file.readline().strip())
+	number_of_cows = int(file.readline().strip())
 	times = file.read().split('\n')
 
 times = list(filter(None, times))
-times.sort(key = sortKeyGen)
-mStart, mEnd = map(int,times[0].strip().split(" "))
+times.sort(key = sortKey)
+minimum_start, maximum_end = map(int, times[0].strip().split(' '))
 
-longestC = mEnd-mStart
-longestI = 0
+longest_continuous_milking = maximum_end - minimum_start
+longest_idle_time = 0
 
 for time in times:
 	if time:
-		start, end = map(int,time.strip().split(" "))
+		start, end = map(int,time.strip().split(' '))
 
-		if start-mEnd >= longestI :
-			longestI = start-mEnd
+		if start - maximum_end >= longest_idle_time :
+			longest_idle_time = start-maximum_end
 
-		if mStart<=start and start<=mEnd:
-			if mEnd<end:
-					mEnd=end
+		if minimum_start <= start and start <= maximum_end:
+			if maximum_end < end:
+					maximum_end = end
 		else:
-			if mEnd-mStart > longestC:
-					longestC = mEnd-mStart
-			mStart,mEnd = start,end
+			if maximum_end - minimum_start > longest_continuous_milking:
+					longest_continuous_milking = maximum_end - minimum_start
+			minimum_start, maximum_end = start, end
 
 with open('milk2.out','w') as file:
-	file.write(f"{longestC} {longestI}\n")
+	file.write(f"{longest_continuous_milking} {longest_idle_time}\n")
