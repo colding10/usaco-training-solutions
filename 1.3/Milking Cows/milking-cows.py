@@ -31,7 +31,7 @@ for time in times:
 		start, end = map(int,time.strip().split(' '))
 
 		if start - maximum_end >= longest_idle_time :
-			longest_idle_time = start-maximum_end
+			longest_idle_time = start - maximum_end
 
 		if minimum_start <= start and start <= maximum_end:
 			if maximum_end < end:
