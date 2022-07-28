@@ -4,12 +4,7 @@ LANG: PYTHON3
 TASK: ariprog
 '''
 
-#import os
-
-#try:
-#    os.chdir(os.path.dirname(__file__))
-#except:
-#    pass
+# did not pass time check, used Java
 
 import time
 from itertools import combinations_with_replacement
@@ -27,8 +22,6 @@ def checkNum(bisquare_index, all_bisquares, difference):
             return False
     return True
 
-#def dfs():
-    #
 
 print(f'starting: {time.time()}')
 start = time.time()
@@ -46,14 +39,6 @@ for starting_index in range(0, len(all_bisquares) - N + 1):
         if checkNum(starting_index, all_bisquares, difference):
             sequences.append([all_bisquares[starting_index], difference])
 
-#sequences = [[all_bisquares[starting_index], all_bisquares[ending_index] - all_bisquares[starting_index]] for starting_index, ending_index in combinations_with_replacement(range(0, len(all_bisquares) - N + 1), 2) if all_bisquares[starting_index] + (N - 1) * all_bisquares[ending_index] - all_bisquares[starting_index] <= maximum_number and checkNum(starting_index, all_bisquares, all_bisquares[ending_index] - all_bisquares[starting_index]) == True]
-# sequences = [
-#     [[all_bisquares[starting_index], all_bisquares[ending_index] - all_bisquares[starting_index]] 
-#     for starting_index in range(0, len(all_bisquares) - N + 1)
-#     for ending_index in range(starting_index + 1, len(all_bisquares) - N + 2)
-#     if all_bisquares[starting_index] + (N - 1) * all_bisquares[ending_index] - all_bisquares[starting_index] <= maximum_number
-#     and checkNum(starting_index, all_bisquares, all_bisquares[ending_index] - all_bisquares[starting_index]) == True]
-# ]
 
 if len(sequences) != 0:
     sequences.sort(key=lambda d: d[1])

@@ -4,6 +4,10 @@ LANG: PYTHON3
 TASK: milk3
 '''
 
+# go through all possible pouring cases
+# find cases where bucket a is empty
+# only go through new cases
+
 with open('milk3.in', 'r') as file:
     A, B, C = map(int, file.readline().strip().split())
 

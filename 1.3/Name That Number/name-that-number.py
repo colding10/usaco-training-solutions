@@ -5,11 +5,6 @@ TASK: namenum
 '''
 
 import itertools
-#import os
-#try:
-#    os.chdir(os.path.dirname(__file__))
-#except:
-#    pass
 
 # go through possible names
 

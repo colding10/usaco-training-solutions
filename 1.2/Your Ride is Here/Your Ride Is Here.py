@@ -4,12 +4,6 @@ LANG: PYTHON3
 TASK: ride
 '''
 
-#import os
-#try:
-#    os.chdir(os.path.dirname(__file__))
-#except:
-#    pass
-
 # simple addition and mods
 
 def getNumberProduct(letter_string):

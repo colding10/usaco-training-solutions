@@ -4,13 +4,6 @@ LANG: PYTHON3
 TASK: beads
 """
 
-#import os
-#try:
-#    os.chdir(os.path.dirname(__file__))
-#except:
-#    pass
-
-
 # find all possible cuts and add the other part of necklace for being able to loop
 # go through all possible combinations
 # get maximum number of beads collected

@@ -4,11 +4,7 @@ LANG: PYTHON3
 TASK: combo
 '''
 
-#import os
-#try:
-#    os.chdir(os.path.dirname(__file__))
-#except:
-#    pass
+# brute force, get all possible combinations
 
 def get_before(a_list, index):
     try:
@@ -25,10 +21,6 @@ def get_after(a_list, index):
 with open('combo.in', 'r') as file:
     lines = [line.replace('\n', '') for line in file.readlines()]
 
-#lines = ['N', '1 2 3', '5 6 7']
-#lines = ['10', '9 9 9', '3 3 3']
-#lines = ['N', '49 N 1', 'N 1 2']
-#lines = ['100', '100 100 100', '1 1 1']
 N = int(lines.pop(0))
 
 combos_list = list(range(1, N+1))
@@ -41,6 +33,7 @@ possible_digit_one_john = []
 possible_digit_two_john = []
 possible_digit_three_john = []
 index = 0
+
 for digit in john_combination:
     digit_combos_index = combos_list.index(digit)
     digit_index = index
@@ -80,14 +73,9 @@ if master_combination != john_combination:
                 
 all_possible_combinations.append(tuple(master_combination))
 all_possible_combinations.append(tuple(john_combination))
-#print(all_possible_combinations)
+
 all_possible_combinations = list(set(all_possible_combinations))
 
-#print(len(all_possible_combinations))
-#print(all_possible_combinations)
-#print(possible_digit_one_john)
-#print(possible_digit_two_john)
-#print(possible_digit_three_john)
 
 with open('combo.out', 'w') as file:
     file.write(str(len(all_possible_combinations)) + '\n')

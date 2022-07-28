@@ -4,13 +4,9 @@ LANG: PYTHON3
 TASK: barn1
 '''
 
-#import os
-#try:
-#    os.chdir(os.path.dirname(__file__))
-#except:
-#    pass
-
-#greedy algorithm
+# greedy algorithm, build up solutions
+# by removing a section that saves the most wood every time
+# until the optimal solution is reached
 
 with open('barn1.in', 'r') as file:
     #lines = ['4 50 17', '3', '4', '6', '8', '14', '15', '16', '17', '21', '25', '26', '27', '30', '31', '40', '41', '42', '43']

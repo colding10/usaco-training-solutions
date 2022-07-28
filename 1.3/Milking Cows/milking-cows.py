@@ -4,12 +4,6 @@ LANG: PYTHON3
 TASK: milk2
 '''
 
-#import os
-#try:
-#    os.chdir(os.path.dirname(__file__))
-#except:
-#    pass
-
 # work through times
 
 def sortKey(line):

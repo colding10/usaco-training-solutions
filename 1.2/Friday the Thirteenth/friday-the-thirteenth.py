@@ -4,11 +4,6 @@ ID: colindi1
 LANG: PYTHON3
 TASK: friday
 '''
-#import os
-#try:
-#    os.chdir(os.path.dirname(__file__))
-#except:
-#    pass
 
 # iterate through months and check for leap years too
 

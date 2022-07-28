@@ -4,6 +4,11 @@ LANG: PYTHON3
 TASK: wormhole
 '''
 
+# somewhat complex, create a Coord object for the wormholes
+# with methods such as the x, y, and what it is paired to
+# using this class, we can easily go through the wormholes
+# using an array to save our route
+# to see if we are trapped in a loop
 class Coord(object):
     """Instances of the wormhole instances"""
 

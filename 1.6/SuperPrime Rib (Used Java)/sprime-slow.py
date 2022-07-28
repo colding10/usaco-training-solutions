@@ -4,6 +4,8 @@ LANG: PYTHON3
 TASK: sprime
 '''
 
+# too slow, used Java instead
+
 with open('sprime.in', 'r') as file:
     rib_length = int(file.readline())
 

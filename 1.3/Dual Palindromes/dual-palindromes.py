@@ -4,12 +4,6 @@ LANG: PYTHON3
 TASK: dualpal
 '''
 
-#import os
-#try:
-#    os.chdir(os.path.dirname(__file__))
-#except:
-#    pass
-
 # simple math
 
 with open('dualpal.in', 'r') as file:

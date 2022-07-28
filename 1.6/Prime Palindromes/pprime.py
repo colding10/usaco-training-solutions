@@ -4,6 +4,12 @@ LANG: PYTHON3
 TASK: pprime
 '''
 
+# simple logic, not much algorithms
+# generate the palindromes with the lengths incrementing
+# check if it is prime
+# much faster than looping through primes or by checking odd numbers
+# there are way less palindromes
+
 with open('pprime.in', 'r') as file:
     A, B = map(int, file.readline().strip().split())
 

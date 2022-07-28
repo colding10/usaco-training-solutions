@@ -4,11 +4,8 @@ LANG: PYTHON3
 TASK: transform
 '''
 
-#import os
-#try:
-#    os.chdir(os.path.dirname(__file__))
-#except:
-#    pass
+# define transformation functions and then
+# run through each by check if a statement is true
 
 with open ('transform.in', 'r') as file:
     lines = [line.replace('\n', '') for line in file.readlines()]

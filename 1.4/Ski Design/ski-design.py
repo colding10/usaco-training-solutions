@@ -4,11 +4,12 @@ LANG: PYTHON3
 TASK: skidesign
 '''
 
-#import os
-#try:
-#    os.chdir(os.path.dirname(__file__))
-#except:
-#    pass
+# iterate through starting and ending points (difference of 17)
+# and then find the cost to shorten or add mass to hills
+# such that they will fall between the starting and ending points
+# calculate mass added, square to get price
+# and add that price to list of possible prices
+# find minimum price from a specified range
 
 with open('skidesign.in', 'r') as file:
     lines = [line.replace('\n', '') for line in file.readlines()]

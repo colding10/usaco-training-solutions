@@ -4,11 +4,6 @@ LANG: PYTHON3
 TASK: gift1
 '''
 
-#import os
-#try:
-#    os.chdir(os.path.dirname(__file__))
-#except:
-#    pass
 
 # create variables for each person and add
 

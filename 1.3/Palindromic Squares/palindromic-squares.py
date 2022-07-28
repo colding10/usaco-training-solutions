@@ -4,11 +4,8 @@ LANG: PYTHON3
 TASK: palsquare
 '''
 
-#import os
-#try:
-#    os.chdir(os.path.dirname(__file__))
-#except:
-#    pass
+# simple math again
+
 def numberToBase(n, b):
         if n == 0:
             return [0]
@@ -26,7 +23,7 @@ def numberToBase(n, b):
 with open('palsquare.in', 'r') as file:
     B = int(file.readline().replace('\n', ''))
     
-over_flow_digits = {10:'A',11:'B',12:'C',13:'D',14:'E',15:'F',16:'G',17:'H',18:'I',19:'J'}
+over_flow_digits = {10:'A', 11:'B', 12:'C', 13:'D', 14:'E', 15:'F', 16:'G', 17:'H', 18:'I', 19:'J'}
 
 out = ''
 for N in range(1, 301):
@@ -34,7 +31,6 @@ for N in range(1, 301):
     
     n_squared_based = numberToBase(n_squared, B)
     if str(n_squared_based) == str(n_squared_based)[::-1]:
-        #print(N, n_squared)
         out += f'{numberToBase(N, B)} {n_squared_based}'
         out += '\n'
 

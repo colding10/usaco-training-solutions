@@ -4,11 +4,8 @@ LANG: PYTHON3
 TASK: milk
 '''
 
-#import os
-#try:
-#    os.chdir(os.path.dirname(__file__))
-#except:
-#    pass
+# simple logic, buy as much as possible (or needed) from the cheapest farmer
+# and then go to the next cheapest farmer after cheapest stock exhausted
 
 with open('milk.in', 'r') as file:
     lines = [line.replace('\n', '') for line in file.readlines()]

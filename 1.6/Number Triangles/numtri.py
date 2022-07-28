@@ -4,6 +4,12 @@ LANG: PYTHON3
 TASK: numtri
 '''
 
+# for each row, go through each number
+# add it to the highest one above it (two choices)
+# this is much faster than doing dfs or bfs
+# this can find the maximum "route product" to any point
+# just find the maximum of the bottom row
+
 with open('numtri.in', 'r') as file:
     number_of_rows = int(file.readline())
 

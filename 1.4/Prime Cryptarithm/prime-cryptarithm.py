@@ -4,11 +4,7 @@ LANG: PYTHON3
 TASK: crypt1
 '''
 
-#import os
-#try:
-#    os.chdir(os.path.dirname(__file__))
-#except:
-#    pass
+# brute force again, just generate all cases and then test the cases
 
 def generateAllCases(digits):
     cases = []
@@ -65,9 +61,6 @@ cases = list(set(generateAllCases(digits)))
 for case in cases:
     if testCase(*case):
         working_cases += 1
-        #print(case)
-
-#print(working_cases)
 
 with open('crypt1.out', 'w') as file:
     file.write(str(working_cases) + '\n')
