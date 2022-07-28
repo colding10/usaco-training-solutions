@@ -10,6 +10,11 @@ TASK: beads
 #except:
 #    pass
 
+
+# find all possible cuts and add the other part of necklace for being able to loop
+# go through all possible combinations
+# get maximum number of beads collected
+
 with open('beads.in', 'r') as file:
     lines = [i.replace('\n', '') for i in file.readlines()]
     necklace = lines[1]
