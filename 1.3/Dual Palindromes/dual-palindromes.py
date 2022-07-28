@@ -10,6 +10,8 @@ TASK: dualpal
 #except:
 #    pass
 
+# simple math
+
 with open('dualpal.in', 'r') as file:
     N, S = [int(i) for i in ((file.readline().replace('\n', '')).split(' '))]
 

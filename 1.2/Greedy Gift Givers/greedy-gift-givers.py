@@ -10,6 +10,8 @@ TASK: gift1
 #except:
 #    pass
 
+# create variables for each person and add
+
 with open('gift1.in', 'r') as file:
     lines = [i.replace('\n', '') for i in file.readlines()]
 

@@ -10,6 +10,8 @@ TASK: milk2
 #except:
 #    pass
 
+# work through times
+
 def sortKey(line):
 	if line:
 		start, end = map(int, line.strip().split(' '))

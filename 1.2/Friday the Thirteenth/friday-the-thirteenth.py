@@ -10,6 +10,8 @@ TASK: friday
 #except:
 #    pass
 
+# iterate through months and check for leap years too
+
 with open('friday.in', 'r') as file:
     N = int(file.readline())
 

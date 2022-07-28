@@ -10,6 +10,9 @@ import itertools
 #    os.chdir(os.path.dirname(__file__))
 #except:
 #    pass
+
+# go through possible names
+
 letter_to_numbers = {2 : ('A','B','C'), 3: ("D","E","F"), 4: ("G","H","I"), 5: ("J","K","L"), 6: ("M","N","O"), 7: ("P","R","S") , 8: ("T","U","V"), 9:("W","X","Y")}
 
 def getAllPossible(serial):

@@ -10,6 +10,8 @@ TASK: ride
 #except:
 #    pass
 
+# simple addition and mods
+
 def getNumberProduct(letter_string):
     return eval('*'.join([str(i) for i in [ord(letter) - 64 for letter in letter_string]]))
 
