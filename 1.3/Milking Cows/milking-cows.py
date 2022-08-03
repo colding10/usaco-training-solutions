@@ -17,25 +17,25 @@ with open('milk2.in','r') as file:
 
 times = list(filter(None, times))
 times.sort(key = sortKey)
-minimum_start, maximum_end = map(int, times[0].strip().split(' '))
+minimum_start, minimum_start_end = map(int, times[0].strip().split(' '))
 
-longest_continuous_milking = maximum_end - minimum_start
+longest_continuous_milking = minimum_start_end - minimum_start
 longest_idle_time = 0
 
 for time in times:
 	if time:
-		start, end = map(int,time.strip().split(' '))
+		start, end = map(int, time.strip().split(' '))
 
-		if start - maximum_end >= longest_idle_time :
-			longest_idle_time = start - maximum_end
+		if start - minimum_start_end >= longest_idle_time :
+			longest_idle_time = start - minimum_start_end
 
-		if minimum_start <= start and start <= maximum_end:
-			if maximum_end < end:
-					maximum_end = end
+		if minimum_start <= start and start <= minimum_start_end:
+			if minimum_start_end < end:
+				minimum_start_end = end
 		else:
-			if maximum_end - minimum_start > longest_continuous_milking:
-					longest_continuous_milking = maximum_end - minimum_start
-			minimum_start, maximum_end = start, end
+			if minimum_start_end - minimum_start > longest_continuous_milking:
+				longest_continuous_milking = minimum_start_end - minimum_start
+			minimum_start, minimum_start_end = start, end
 
 with open('milk2.out','w') as file:
 	file.write(f"{longest_continuous_milking} {longest_idle_time}\n")

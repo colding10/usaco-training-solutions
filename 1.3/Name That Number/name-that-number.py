@@ -17,23 +17,22 @@ def getAllPossible(serial):
         possible_letters = letter_to_numbers[digit]
         possibles.append(possible_letters)
     cases = (itertools.product(*possibles))
-    for case in cases:
-        yield ''.join(case)
+    return [''.join(i) for i in cases]
 
 with open('namenum.in', 'r') as file:
     serial = int(file.readline().replace('\n', ''))
 
 with open('dict.txt', 'r') as file:
-    valid_names = [line.replace('\n', '') for line in file.readlines()]
-    valid_names = [i for i in valid_names if len(i) == len(str(serial))]
+    valid_names = [i for i in [line.replace('\n', '') for line in file.readlines()] if len(i) == len(str(serial))]
+    #valid_names = [line.replace('\n', '') for line in file.readlines()]
 
 good_names = []
 
 for name in valid_names:
-    if name in list(getAllPossible(serial)):
+    if name in getAllPossible(serial):
         good_names.append(name)
 
-if good_names == []:
+if not good_names:
     out = 'NONE\n'
 else:
     out = '\n'.join(good_names) + '\n'
